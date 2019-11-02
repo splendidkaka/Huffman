@@ -86,7 +86,7 @@ int Code(HuffmanTree HT,HCNode HC)
 		while (HT[j].parent!=-1)
 		{
 		
-			if (HT[HT[j].parent].lchild == j)  //Íê³É×ó·ÖÖ§0£¬ÓÒ·ÖÖ§1
+			if (HT[HT[j].parent].lchild == j)  //å®Œæˆå·¦åˆ†æ”¯0ï¼Œå³åˆ†æ”¯1
 			{
 			    str[count++]='0';                	
 			}
@@ -109,10 +109,8 @@ int Code(HuffmanTree HT,HCNode HC)
         {
             str[p-1]='\0';
         }
-	   // for(k=0;k<strlen(str);k++)
-		//HC[i].code[k] = str[k];
 		if (HT[i].lchild == -1 && HT[i].rchild == -1)continue;
-		else break;    //ÍË³öÌõ¼ş
+		else break;    //é€€å‡ºæ¡ä»¶
 	}
 	return i;
 }
@@ -155,7 +153,6 @@ void Encode(HuffmanTree HT)
 		}
 		if (HT[j].lchild == -1 && HT[j].rchild == -1)
 		{
-			//cout << HT[j].data;
 			printf("%c",HT[j].data);
 			j = root;
 		}
@@ -171,20 +168,20 @@ main()
     HCNode hc;
     Creat(ht);
     Creat1(hc);
-    printf("ÇëÊäÈë×Ö·û¸öÊı\n");
+    printf("è¯·è¾“å…¥å­—ç¬¦ä¸ªæ•°\n");
     scanf("%d",&n);
     w=(int*)malloc(n*sizeof(int));
     ch=(char*)malloc(n*sizeof(char));
     for(j=0;j<n;j++)
     {
-        printf("ÊäÈëµÚ%d¸ö×Ö·ûµÄÈ¨Öµ",j);
+        printf("è¾“å…¥ç¬¬%dä¸ªå­—ç¬¦çš„æƒå€¼",j);
         scanf("%d",&w[j]);
 
     }
      getchar();
      for(j=0;j<n;j++)
     {
-        printf("ÊäÈëµÚ%d¸ö×Ö·û",j);
+        printf("è¾“å…¥ç¬¬%dä¸ªå­—ç¬¦",j);
         scanf("%c",&ch[j]);
         getchar();
     }
